@@ -1,0 +1,59 @@
+# # sys
+# simulator directory name for saving and restoring
+simulator_dir: data/simulator
+# simulator restoring name
+simulator_restore_file_name: 654572698-Round[70]-AgentNum[134]-2024-09-10-19_07_55
+# random seed
+seed: 2024
+
+# # Simulator
+# number of epochs
+round: 200
+# number of agents, which cannot exceed the number of user in user.csv
+agent_num: 134  # 134
+# number of items to be recommended in one page
+page_size: 5
+
+url: http://localhost:11434
+model_name: llama3.1:8b-instruct-fp16
+emb_model_name: llama3.1:8b-instruct-fp16
+emb_size: 4096
+
+
+# execution mode, serial or parallel
+execution_mode: parallel # parallel serial
+# verbose mode
+verbose: False # True
+# threshold for agent num
+active_agent_threshold: 200
+# method for choose agent to be active, random, sample, or marginal
+active_method: sample
+# propability for agent to be active
+active_prob: 1.0
+# ratio of random recommendation, 1,3,5
+rec_random_k: 0
+
+
+# # data
+# path for item data
+item_path: data/sampled_items.jsonl
+# path for user data
+user_path: data/user.jsonl
+# path for save interaction records
+interaction_path: output/
+# directory name for faiss index
+ckpt_path: data/ckpt
+index_name: data/faiss_llama3_1_In_f16
+
+# # rs
+# recommender system model
+rec_model: MF
+# train epoch number for recommender system model
+epoch_num: 10
+# batch size for recommender system model
+batch_size: 64
+# embedding size for recommender system model
+embedding_size: 64
+# learning rate for recommender system model
+lr: 0.001
+
