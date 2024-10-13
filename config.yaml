@@ -2,7 +2,7 @@
 # simulator directory name for saving and restoring
 simulator_dir: data/simulator
 # simulator restoring name
-simulator_restore_file_name: 654572698-Round[70]-AgentNum[134]-2024-09-10-19_07_55
+simulator_restore_file_name:
 # random seed
 seed: 2024
 
